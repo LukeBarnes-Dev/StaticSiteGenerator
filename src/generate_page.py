@@ -44,4 +44,5 @@ def generate_pages_recursive(dir_path_content: str, template_path: str, dest_dir
             new_dest_path = Path(new_dest_path).with_suffix(".html")
             generate_page(new_dir_path, template_path, new_dest_path, base_path)
         else:
+            base_path = "/"
             generate_pages_recursive(new_dir_path, template_path, new_dest_path, base_path)

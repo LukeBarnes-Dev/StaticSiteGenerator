@@ -36,7 +36,7 @@ def generate_page(from_path: str, template_path: str, dest_path: str, base_path:
     to_file = open(dest_path, "w")
     to_file.write(template)
 
-def generate_pages_recursive(dir_path_content: str, template_path: str, dest_dir_path: str, base_path: str):
+def generate_pages_recursive(dir_path_content: str, template_path: str, dest_dir_path: str | Path, base_path: str):
     for p in os.listdir(dir_path_content):
         new_dir_path = os.path.join(dir_path_content, p)
         new_dest_path = os.path.join(dest_dir_path, p)
